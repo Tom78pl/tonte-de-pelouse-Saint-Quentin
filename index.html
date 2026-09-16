@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tonte de pelouse</title>
+<meta name="description" content="Tonte de pelouse à partir de 10 € dans les Yvelines (78).">
+<style>
+:root{--green:#21b84b;--dark:#082514;--lime:#b7f34a;--light:#f4faef;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#102016}
+header{background:linear-gradient(135deg,#062414,#126b2e);color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-weight:900;font-size:22px}.badge{background:var(--lime);color:#0b2513;padding:10px 15px;border-radius:999px;font-weight:900}
+.hero{padding:70px 7%;background:linear-gradient(120deg,rgba(5,35,18,.95),rgba(12,110,46,.78)),url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1800&q=80') center/cover;color:white}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.95;margin:0 0 20px;max-width:800px}.hero p{font-size:21px;max-width:700px}
+.btn{display:inline-block;padding:15px 22px;border-radius:12px;text-decoration:none;font-weight:800;border:0;cursor:pointer;font-size:16px}
+.btn-primary{background:var(--lime);color:#09200f}.btn-dark{background:#082514;color:white;margin-left:8px}
+section{padding:55px 7%;max-width:1200px;margin:auto}.title{text-align:center;font-size:34px;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.07)}.card h3{margin-top:0}
+.price{font-size:40px;font-weight:900;color:#148b38}.small{font-size:14px;color:#607066}
+.booking{background:#082514;color:white;border-radius:24px;padding:30px}
+form{display:grid;gap:15px} label{font-weight:700} input,select,textarea{width:100%;padding:14px;border-radius:10px;border:1px solid #cbd7ce;font-size:16px} textarea{min-height:110px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}@media(max-width:700px){.grid2{grid-template-columns:1fr}.btn-dark{margin:8px 0 0}}
+.total{background:#173b23;padding:18px;border-radius:12px;font-size:20px}.notice{background:#fff7d8;color:#5b4800;padding:15px;border-radius:12px;font-size:14px}
+footer{background:#04150b;color:#dceee2;padding:30px 7%;text-align:center}
+a{color:inherit}.contact{font-size:18px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🌱 Tonte de pelouse</div>
+  <div class="badge">À partir de 10 €</div>
+</header>
+
+<div class="hero">
+  <h1>Une pelouse propre, simplement.</h1>
+  <p>Tonte de pelouse à petit prix dans les Yvelines (78). J'ai déjà tondu plusieurs jardins. Je ne suis pas un expert, mais je suis motivé, sérieux et soigneux.</p>
+  <a class="btn btn-primary" href="#rdv">Demander un rendez-vous</a>
+  <a class="btn btn-dark" href="#tarifs">Voir les tarifs</a>
+</div>
+
+<section>
+  <h2 class="title">Pourquoi me contacter ?</h2>
+  <div class="cards">
+    <div class="card"><h3>🌿 Tonte</h3><p>Tonte de pelouse pour petits jardins et espaces accessibles.</p></div>
+    <div class="card"><h3>💶 Petit prix</h3><p>Tarif de départ à <strong>10 €</strong>, selon la taille et l'état de la pelouse.</p></div>
+    <div class="card"><h3>📍 78 uniquement</h3><p>Interventions uniquement dans le département des Yvelines.</p><p><strong>🕒 Disponibilités :</strong> mercredi après-midi et week-ends.</p></div>
+    <div class="card"><h3>🤝 Transparent</h3><p>Je précise que je suis encore en apprentissage et que je ne suis pas un professionnel.</p></div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <h2 class="title">Tarifs indicatifs</h2>
+  <div class="cards">
+    <div class="card"><div class="price">10 €</div><h3>Petite pelouse</h3><p>Pour une petite surface facilement accessible.</p></div>
+    <div class="card"><div class="price">15 €</div><h3>Pelouse moyenne</h3><p>Tarif indicatif pour une surface plus importante.</p></div>
+    <div class="card"><div class="price">20 €+</div><h3>Grande pelouse</h3><p>Prix à confirmer après description ou photo.</p></div>
+  </div>
+  <p class="small">Les prix sont indicatifs : un tarif définitif est confirmé avant le rendez-vous.</p>
+</section>
+
+<section id="rdv">
+  <div class="booking">
+    <h2>📅 Demander un rendez-vous</h2>
+    <p>Remplis le formulaire. Il ouvrira automatiquement un e-mail avec les informations de ta demande.</p>
+    <form id="bookingForm">
+      <div class="grid2">
+        <div><label>Nom / prénom</label><input id="name" required></div>
+        <div><label>Téléphone</label><input id="phone" type="tel" required></div>
+      </div>
+      <div class="grid2">
+        <div><label>Ville (78)</label><input id="city" required placeholder="Ex. Versailles"></div>
+        <div><label>Date souhaitée</label><input id="date" type="date" required></div>
+      </div>
+      <div class="grid2">
+        <div><label>Créneau souhaité</label>
+          <select id="time" required>
+            <option value="">Choisir</option><option>Matin</option><option>Après-midi</option><option>Fin de journée</option>
+          </select>
+        </div>
+        <div><label>Taille estimée</label>
+          <select id="size" required>
+            <option value="">Choisir</option><option>Petite</option><option>Moyenne</option><option>Grande</option><option>Je ne sais pas</option>
+          </select>
+        </div>
+      </div>
+      <div><label>Message / précisions</label><textarea id="message" placeholder="Accès au jardin, état de la pelouse, contraintes..."></textarea></div>
+      <div class="total">Tarif demandé : <strong>à confirmer avant le rendez-vous</strong></div>
+      <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+      <div class="notice">Pour ta sécurité, si tu es mineur, fais valider l'organisation des rendez-vous par un parent/tuteur et évite de te rendre seul chez une personne inconnue.</div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Contact</h2>
+  <div class="cards">
+    <div class="card contact"><strong>📞 Téléphone</strong><br>06 69 36 67 31</div>
+    <div class="card contact"><strong>✉️ E-mail</strong><br><a href="mailto:tthurmeau@gmail.com">tthurmeau@gmail.com</a></div>
+    <div class="card contact"><strong>📍 Zone</strong><br>Yvelines (78) uniquement</div><div class="card contact"><strong>🕒 Disponibilités</strong><br>Mercredi après-midi et week-ends</div>
+  </div>
+</section>
+
+<footer>🌱 Tonte de pelouse – Yvelines (78) · Service local · Tarif confirmé avant intervention</footer>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const phone=document.getElementById('phone').value;
+  const city=document.getElementById('city').value;
+  const date=document.getElementById('date').value;
+  const time=document.getElementById('time').value;
+  const size=document.getElementById('size').value;
+  const msg=document.getElementById('message').value;
+  const subject=encodeURIComponent('Demande de tonte de pelouse - '+city);
+  const body=encodeURIComponent(
+`Bonjour,
+
+Je souhaite demander une tonte de pelouse.
+
+Nom / prénom : ${name}
+Téléphone : ${phone}
+Ville : ${city}
+Date souhaitée : ${date}
+Créneau : ${time}
+Taille estimée : ${size}
+
+Précisions :
+${msg}
+
+Merci.`
+  );
+  window.location.href=`mailto:tthurmeau@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
